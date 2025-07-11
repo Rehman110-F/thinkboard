@@ -1,0 +1,21 @@
+{
+  "name": "mern-coursre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix BackEnd && npm install --prefix FrontEnd && npm run  build --prefix FrontEnd",
+    "start": "npm run start --prefix BackEnd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rehman110-F/thinkboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rehman110-F/thinkboard/issues"
+  },
+  "homepage": "https://github.com/Rehman110-F/thinkboard#readme",
+  "description": ""
+}

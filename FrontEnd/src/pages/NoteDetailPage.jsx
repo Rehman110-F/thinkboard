@@ -17,7 +17,7 @@ const NoteDetailPage = () => {
       try {
         console.log("Fetching note with ID:", id);
         setLoading(true);
-        const response = await axios.get(`http://localhost:5001/api/notes/${id}`);
+        const response = await axios.get(`/notes/${id}`);
         setNote(response.data);
       } catch (error) {
         console.error("Error fetching note:", error);
@@ -33,7 +33,7 @@ const NoteDetailPage = () => {
 
   const deleteHandle = async () => {
     try {
-      await api.delete(`http://localhost:5001/api/notes/${id}`);
+      await api.delete(`/notes/${id}`);
       toast.success("Deleted successfully!");
       navigate('/');
     } catch (error) {
@@ -45,7 +45,7 @@ const NoteDetailPage = () => {
     try {
       if (note.title.trim() && note.content.trim()) {
         setSaving(true);
-        await api.put(`http://localhost:5001/api/notes/${id}`, {
+        await api.put(`/notes/${id}`, {
           title: note.title,
           content: note.content,
         });
